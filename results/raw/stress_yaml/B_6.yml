@@ -1,0 +1,38 @@
+---
+system-info:
+      stress-ng-version: 0.15.06
+      run-by: root
+      date-yyyy-mm-dd: 2026:08:16
+      time-hh-mm-ss: 19:37:58
+      epoch-secs: 1786909078
+      hostname: 6ce5925e5ba5
+      sysname: Linux
+      nodename: 6ce5925e5ba5
+      release: 7.1.5-101.fc43.x86_64
+      version: '#1 SMP PREEMPT_DYNAMIC Tue Jul 28 14:24:13 UTC 2026'
+      machine: x86_64
+      compiler: 'gcc 12.2.0'
+      uptime: 12484
+      totalram: 32631930880
+      freeram: 11822604288
+      sharedram: 127406080
+      bufferram: 4415488
+      totalswap: 8589930496
+      freeswap: 8589930496
+      pagesize: 4096
+      cpus: 24
+      cpus-online: 24
+      ticks-per-second: 100
+
+metrics:
+    - stressor: cpu
+      bogo-ops: 1504574
+      bogo-ops-per-second-usr-sys-time: 2155.436137
+      bogo-ops-per-second-real-time: 23146.960601
+      wall-clock-time: 65.000931
+      user-time: 697.451967
+      system-time: 0.584952
+      cpu-usage-per-instance: 89.490630
+      max-rss: 6568
+
+...

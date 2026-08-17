@@ -1,0 +1,9 @@
+=== root dmem.capacity ===
+drm/0000:03:00.0/vram 17095983104
+drm/0000:7c:00.0/vram 536870912
+=== root controllers ===
+cpuset cpu io memory hugetlb pids rdma misc dmem
+=== kernel ===
+7.1.5-101.fc43.x86_64
+=== docker version ===
+Docker version 29.6.2, build dfc4efb

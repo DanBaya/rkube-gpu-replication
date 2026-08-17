@@ -1,0 +1,74 @@
+CPU arm: 10 trials x 3 conditions, interleaved
+started 2026-08-16T15:16:54-04:00
+csv: /home/danielbayasgalan/Dr.ChenTrailTask/results/raw/cpu.csv
+
+--- host provenance ---
+Linux DESKTOP-ACBUCTP 7.1.5-101.fc43.x86_64 #1 SMP PREEMPT_DYNAMIC Tue Jul 28 14:24:13 UTC 2026 x86_64 GNU/Linux
+24
+Docker version 29.6.2, build dfc4efb
+cgroup driver: systemd / version: 2
+-----------------------
+[15:16:54] condition A trial 1
+cond=A trial=1 ratio=0.9985 throttled=217 bogo/s=32885.257110
+[15:18:05] condition B trial 1
+cond=B trial=1 ratio=0.9152 throttled=0 bogo/s=23567.248849
+[15:19:21] condition C trial 1
+cond=C trial=1 ratio=0.4525 throttled=0 bogo/s=11559.776278
+[15:20:39] condition A trial 2
+cond=A trial=2 ratio=0.9983 throttled=227 bogo/s=32932.975273
+[15:21:49] condition B trial 2
+cond=B trial=2 ratio=0.9025 throttled=0 bogo/s=23214.482961
+[15:23:06] condition C trial 2
+cond=C trial=2 ratio=0.4503 throttled=0 bogo/s=11531.196190
+[15:24:23] condition A trial 3
+cond=A trial=3 ratio=0.9986 throttled=262 bogo/s=33279.122235
+[15:25:34] condition B trial 3
+cond=B trial=3 ratio=0.8269 throttled=0 bogo/s=21981.122200
+[15:26:50] condition C trial 3
+cond=C trial=3 ratio=0.4504 throttled=0 bogo/s=11426.488558
+[15:28:08] condition A trial 4
+cond=A trial=4 ratio=0.9984 throttled=248 bogo/s=33166.019273
+[15:29:18] condition B trial 4
+cond=B trial=4 ratio=0.8910 throttled=0 bogo/s=23028.966608
+[15:30:35] condition C trial 4
+cond=C trial=4 ratio=0.4854 throttled=0 bogo/s=12410.043379
+[15:31:52] condition A trial 5
+cond=A trial=5 ratio=0.9988 throttled=266 bogo/s=33411.591026
+[15:33:03] condition B trial 5
+cond=B trial=5 ratio=0.8916 throttled=0 bogo/s=23255.234683
+[15:34:19] condition C trial 5
+cond=C trial=5 ratio=0.5182 throttled=0 bogo/s=13277.633791
+[15:35:37] condition A trial 6
+cond=A trial=6 ratio=0.9984 throttled=248 bogo/s=33082.886802
+[15:36:47] condition B trial 6
+cond=B trial=6 ratio=0.8946 throttled=0 bogo/s=23146.960601
+[15:38:04] condition C trial 6
+cond=C trial=6 ratio=0.5008 throttled=0 bogo/s=12440.153630
+[15:39:21] condition A trial 7
+cond=A trial=7 ratio=0.9882 throttled=224 bogo/s=33456.303472
+[15:40:32] condition B trial 7
+cond=B trial=7 ratio=0.8497 throttled=0 bogo/s=22479.012010
+[15:41:48] condition C trial 7
+cond=C trial=7 ratio=0.5049 throttled=0 bogo/s=12687.301267
+[15:43:06] condition A trial 8
+cond=A trial=8 ratio=0.9987 throttled=287 bogo/s=33344.172543
+[15:44:16] condition B trial 8
+cond=B trial=8 ratio=0.8920 throttled=0 bogo/s=23241.282918
+[15:45:33] condition C trial 8
+cond=C trial=8 ratio=0.4969 throttled=0 bogo/s=12619.540583
+[15:46:50] condition A trial 9
+cond=A trial=9 ratio=0.9984 throttled=255 bogo/s=33184.562047
+[15:48:01] condition B trial 9
+cond=B trial=9 ratio=0.8851 throttled=0 bogo/s=22944.906800
+[15:49:17] condition C trial 9
+cond=C trial=9 ratio=0.4951 throttled=0 bogo/s=12549.947590
+[15:50:34] condition A trial 10
+cond=A trial=10 ratio=0.9984 throttled=242 bogo/s=33147.317591
+[15:51:45] condition B trial 10
+cond=B trial=10 ratio=0.8598 throttled=0 bogo/s=22605.949579
+[15:53:02] condition C trial 10
+cond=C trial=10 ratio=0.4910 throttled=0 bogo/s=12714.144209
+
+finished 2026-08-16T15:54:19-04:00
+failed trials: 0
+rows written: 30

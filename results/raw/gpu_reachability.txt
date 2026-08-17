@@ -1,0 +1,56 @@
+=== Docker: any GPU or VRAM limit flag? ===
+      --gpus gpu-request                 GPU devices to add to the container ('all' to pass all GPUs)
+
+=== Docker device flags available ===
+      --blkio-weight-device list         Block IO weight (relative device weight) (default [])
+      --device list                      Add a host device to the container
+      --device-cgroup-rule list          Add a rule to the cgroup allowed devices list
+      --device-read-bps list             Limit read rate (bytes per second) from a device (default [])
+      --device-read-iops list            Limit read rate (IO per second) from a device (default [])
+      --device-write-bps list            Limit write rate (bytes per second) to a device (default [])
+      --device-write-iops list           Limit write rate (IO per second) to a device (default [])
+      --gpus gpu-request                 GPU devices to add to the container ('all' to pass all GPUs)
+
+=== Kernel dmem controller ===
+drm/0000:03:00.0/vram 17095983104
+drm/0000:7c:00.0/vram 536870912
+drm/0000:03:00.0/vram 1045491712
+drm/0000:7c:00.0/vram 16662528
+
+=== dmem interface inside a container cgroup ===
+docker: Error response from daemon: Invalid container name (p), only [a-zA-Z0-9][a-zA-Z0-9_.-] are allowed
+
+Run 'docker run --help' for more information
+error: no such object: p
+ls: cannot access '/sys/fs/cgroup/system.slice/docker-.scope': No such file or directory
+--- defaults ---
+cat: /sys/fs/cgroup/system.slice/docker-.scope/dmem.max: No such file or directory
+cat: /sys/fs/cgroup/system.slice/docker-.scope/dmem.min: No such file or directory
+cat: /sys/fs/cgroup/system.slice/docker-.scope/dmem.current: No such file or directory
+--- write a 4GiB cap ---
+tee: /sys/fs/cgroup/system.slice/docker-.scope/dmem.max: No such file or directory
+drm/0000:03:00.0/vram 4294967296
+--- write a 2GiB floor ---
+tee: /sys/fs/cgroup/system.slice/docker-.scope/dmem.min: No such file or directory
+drm/0000:03:00.0/vram 2147483648
+=== dmem interface inside container cgroup ===
+dmem.current
+dmem.low
+dmem.max
+dmem.min
+--- defaults ---
+drm/0000:03:00.0/vram max
+drm/0000:7c:00.0/vram max
+drm/0000:03:00.0/vram 0
+drm/0000:7c:00.0/vram 0
+drm/0000:03:00.0/vram 0
+drm/0000:7c:00.0/vram 0
+--- write 4GiB cap ---
+drm/0000:03:00.0/vram 4294967296
+--- write 2GiB floor ---
+drm/0000:03:00.0/vram 2147483648
+--- readback ---
+drm/0000:03:00.0/vram 4294967296
+drm/0000:7c:00.0/vram max
+drm/0000:03:00.0/vram 2147483648
+drm/0000:7c:00.0/vram 0
