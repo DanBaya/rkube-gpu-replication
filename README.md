@@ -37,11 +37,9 @@ two designs can be compared. The GPU findings are unaffected.
 | Trials | 9 | 18, two runs |
 | Result | 51.2% shortfall (retracted) | 5.8% gap |
 
-## Files
-...
+Sep 8th, 2026
 
-## Limitations
-...
+
 
 
 # Do Container Resource Reservations Hold for GPU?
