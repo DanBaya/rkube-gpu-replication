@@ -44,7 +44,7 @@ rkube.slice total (your containers)	52,062.1 CPU seconds
 Everything else (OS, browser, desktop)	973.6 CPU seconds
 Host share of all CPU time ever used	1.8 %
 
-Your missing capacity was 1.93 of 24 CPUs, which is 8 percent. Host overhead runs at under 2 percent. The operating system and your browser are too small to account for it by roughly a factor of four.
+The missing capacity was 1.93 out of 24 CPUs, which is 8 percent. Host overhead runs at under 2 percent. The operating system and browser are too small to account for it by roughly a factor of four. So Operating system taking the 1.93 CPUs are only a small fraction of the 1.93 CPU's
 
 Sep 8th, 2026
 
