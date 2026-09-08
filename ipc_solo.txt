@@ -1,0 +1,8 @@
+
+ Performance counter stats for 'system wide':
+
+ 3,699,964,296,638      cycles                           rkube.slice/docker-906d7969ab05d63244aad799ec4503910e00dca0b021ca77d5f8f09061766cc5.scope                                      
+ 5,718,938,397,194      instructions                     rkube.slice/docker-906d7969ab05d63244aad799ec4503910e00dca0b021ca77d5f8f09061766cc5.scope                                      
+
+      30.002486086 seconds time elapsed
+
