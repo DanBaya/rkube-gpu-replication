@@ -1,3 +1,49 @@
+# rKube Replication: CPU and GPU Reservation Gaps
+
+## Status: Round 2 supersedes Round 1 for CPU
+
+**The Round 1 CPU results are retracted.** They used `--cpus=12`,
+which sets a bandwidth ceiling, not a reservation. That measured
+unfilled cap rather than unmet entitlement. The two are not the
+same quantity and the 51.2% figure should not be cited.
+
+Round 1 is preserved in `/round1/` rather than deleted, so the
+two designs can be compared. The GPU findings are unaffected.
+
+## Takeaways
+
+| Finding | Number |
+|---|---|
+| Mean delivery ratio, 18 trials | 0.942 (5.8% gap) |
+| First minute vs settled | 14.8% gap vs 4.2% gap |
+| Throttling events | 0 in all 18 trials |
+| IPC, SMT on vs off (no neighbors) | 1.546 vs 1.987 |
+
+1. **The gap is a loss, not a transfer.** Neighbors received their
+   own entitlement; the missing capacity went to no container in
+   the slice.
+2. **Most of the gap is a convergence transient.** Reproduced
+   independently in both runs. Matters most for short lived
+   containers.
+3. **Throughput loss is SMT, not cross container contention.**
+   Contention is inside the container, not between containers.
+
+## What changed between rounds
+
+| | Round 1 | Round 2 |
+|---|---|---|
+| Mechanism | `--cpus=12` (cap) | `cpu.weight=100` (entitlement) |
+| What it measured | Unfilled ceiling | Unmet share |
+| Trials | 9 | 18, two runs |
+| Result | 51.2% shortfall (retracted) | 5.8% gap |
+
+## Files
+...
+
+## Limitations
+...
+
+
 # Do Container Resource Reservations Hold for GPU?
 
 A replication and extension of **Mind the Gap: Broken Promises of CPU
