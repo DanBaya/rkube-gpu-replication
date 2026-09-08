@@ -37,6 +37,15 @@ two designs can be compared. The GPU findings are unaffected.
 | Trials | 9 | 18, two runs |
 | Result | 51.2% shortfall (retracted) | 5.8% gap |
 
+
+Quantity	Value
+Root cgroup total (whole machine, since boot)	53,035.7 CPU seconds
+rkube.slice total (your containers)	52,062.1 CPU seconds
+Everything else (OS, browser, desktop)	973.6 CPU seconds
+Host share of all CPU time ever used	1.8 %
+
+Your missing capacity was 1.93 of 24 CPUs, which is 8 percent. Host overhead runs at under 2 percent. The operating system and your browser are too small to account for it by roughly a factor of four.
+
 Sep 8th, 2026
 
 
